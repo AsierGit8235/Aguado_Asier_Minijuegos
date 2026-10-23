@@ -3,25 +3,28 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public void AbrirMinijuego1()
     {
-        public void abrirMinijuego1()
-        {
-            SceneManager.LoadScene("Minijuego_01");
-        }
+        SceneManager.LoadScene("Minijuego_01");
+    }
 
-        public void abrirMinijuego2()
-        {
-            SceneManager.LoadScene("Minijuego_02");
-        }
+    public void AbrirMinijuego2()
+    {
+        SceneManager.LoadScene("Minijuego_02");
+    }
 
-        public void abrirMinijuego3()
-        {
-            SceneManager.LoadScene("Minijuego_03");
-        }
+    public void AbrirMinijuego3()
+    {
+        SceneManager.LoadScene("Minijuego_03");
+    }
 
-        public void salir()
-        {
-            Application.Quit();
-        }
+    public void VolverMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void SalirJuego()
+    {
+        Application.Quit();
     }
 }
