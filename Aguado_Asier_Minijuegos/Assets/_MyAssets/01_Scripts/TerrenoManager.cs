@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class TerrenoManager : MonoBehaviour
 {
-    SerializeField] float anguloMax = 15f;   // inclinación máxima en grados
+    [SerializeField] float anguloMax = 15f;   // inclinación máxima en grados
     [SerializeField] float velocidad = 30f;   // grados por segundo
 
     MyInputActions inputActions;

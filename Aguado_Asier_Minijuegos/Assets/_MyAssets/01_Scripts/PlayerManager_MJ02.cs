@@ -21,7 +21,7 @@ public class PlayerManager_MJ02 : MonoBehaviour
 
         inputActions = new MyInputActions();
         inputActions.Player.MoveX.performed += ctx => entrada = ctx.ReadValue<float>();
-        inputActions.Player.MoveX.canceled += _ => entrada = 0f;
+        inputActions.Player.MoveX.canceled += _ => entrada = 0f; 
     }
 
     private void OnEnable() 

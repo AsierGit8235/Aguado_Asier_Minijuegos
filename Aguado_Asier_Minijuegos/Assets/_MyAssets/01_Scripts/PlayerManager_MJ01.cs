@@ -4,7 +4,8 @@ public class PlayerManager_MJ01 : MonoBehaviour
 {
     public bool alive = true;
 
-    [SerializeField] float fuerza = 15f;
+    [SerializeField] float force = 15f;
+    [SerializeField] float torque = 8f;
     [SerializeField] Transform camara; // opcional: si lo dejas vacío usa la cámara principal
 
     MyInputActions inputActions;
@@ -54,7 +55,8 @@ public class PlayerManager_MJ01 : MonoBehaviour
         derecha.Normalize();
 
         Vector3 direccion = derecha * moveX + adelante * moveY;
-        rb.AddForce(direccion * fuerza);
+        rb.AddForce(direccion * force);
+        rb.AddTorque(direccion * torque);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
