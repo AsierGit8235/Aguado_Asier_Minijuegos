@@ -45,6 +45,9 @@ public class PlayerManager_MJ01 : MonoBehaviour
     {
         if (!alive) return;
 
+        if (Mathf.Abs(moveX) < 0.15f) moveX = 0f;
+        if (Mathf.Abs(moveY) < 0.15f) moveY = 0f;
+
         // Dirección relativa a la cámara (sin inclinación vertical)
         Vector3 adelante = camara.forward;
         adelante.y = 0f;
@@ -62,6 +65,7 @@ public class PlayerManager_MJ01 : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (camara == null) camara = Camera.main.transform;
 
         desplSpeed = 15f;
     }
